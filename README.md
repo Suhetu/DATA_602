@@ -2,6 +2,8 @@
 
 This repository currently contains a Jupyter Notebook of Exploratory Data Analysis performed on my data selection of 'NASA Asteroid Data-Potentially Hazardous Asteroids' as well as a notebook containing classification performed on the dataset to identify Potentially Hazardous Asteroids, or PHAs.
 
+This repository also contains pre-trained classifier models as pickle objects exported from my notebook in case anyone wants to try them out :)
+
 
 The notebook is best viewed using nbviewer, https://nbviewer.org/ . Kindly use the nbviewer as the pandas profiling report is visible on it, else not.
 
