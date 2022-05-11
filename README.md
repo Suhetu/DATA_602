@@ -13,19 +13,29 @@ This project aims to identify observed asteroids if they are potentially hazardo
 
 ## Overview of ML content present in the Jupyter notebook:
 •	The notebook starts by loading the data and the immediate major task performed is feature engineering. Pandas profiling was used to identify important features and to avoid problematic features which were cardinal or were collinear or were all unique.
+
 •	Once the important features were explained and a few new features were derived from the original features, developing machine learning models started.
+
 •	I would like to bring to your notice that the classification problem at hand is highly imbalanced, so the number of true observations are very less (about 1%) but are very important to detect too (having high risk). Hence, I used recall as the significant scoring metric and all my results/comments/model observations would be based on this.
+
 •	The first classification model I used was Logistic Regression since the model is considered a really good baseline model in terms of performance and time. Using this model, I achieved a recall score of 87% for the minority class and 93% macro average recall.
+
 •	The next classification algorithm I used was Logistic regression with L2 Regularization. This model gave a significant improvement with a recall score of 95% for the minority class and 97% macro average recall.
+
 •	Then Decision Trees classification algorithm was implemented, and this model surprised me the most. This model gave perfect (100%)  precision, recall and accuracy. There were zero false positive and false negatives, and every test observation was predicted perfectly.
+
 •	Random Forest classification was then implemented which gave really similar results to the Logistic Regression with L2 Regularization model. I got 95% minority class recall score and 97% macro average recall score.
+
 •	Then a Support Vector Classifier was implemented. Support Vector Classifier also performed really well, getting a recall score of 99% for the minority class. This model also gave very few false positives and false negatives.
+
 •	A KNN classifier was implemented after the SVC and this model surprised me the most. This model gave horrible results with recall score of 28% for the minority class. This model’s results were then ignored.
+
 •	The last classification model implemented was an ensemble. This ensemble consisted of the following models:
-o	Logistic Regression with Regularization
-o	Decision Trees
-o	Random Forest
-o	Support Vector Classifier
+    Logistic Regression with Regularization
+    Decision Trees
+    Random Forest
+    Support Vector Classifier
+    
 All the hyperparameters were tuned using GridsearchCV and the best estimator models of each respective model stated above were used as ‘soft’ voters in the voting classifier algorithm.
 
 ## Key Takeaways:
