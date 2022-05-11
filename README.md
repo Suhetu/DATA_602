@@ -3,13 +3,17 @@
 This repository currently contains a Jupyter Notebook of Exploratory Data Analysis performed on my data selection of 'NASA Asteroid Data-Potentially Hazardous Asteroids' as well as a notebook containing classification performed on the dataset to identify Potentially Hazardous Asteroids, or PHAs.
 The notebook is best viewed using nbviewer, https://nbviewer.org/ .
 
+
+
 ## Data:
 The data source is: https://ssd.jpl.nasa.gov/tools/sbdb_query.html#!#results 
 The data which I have queried has dimensions of 612,011 rows and 74 columns.
 Glossary for data features present in the dataset can be found here: https://cneos.jpl.nasa.gov/glossary/PHA.html 
 
+
 ## Objective:
 This project aims to identify observed asteroids if they are potentially hazardous or not. This goal has been accomplished using certain machine learning classification algorithms present in the scikit-learn library.
+
 
 ## Overview of ML content present in the Jupyter notebook:
 •	The notebook starts by loading the data and the immediate major task performed is feature engineering. Pandas profiling was used to identify important features and to avoid problematic features which were cardinal or were collinear or were all unique.
@@ -38,6 +42,7 @@ This project aims to identify observed asteroids if they are potentially hazardo
     
 All the hyperparameters were tuned using GridsearchCV and the best estimator models of each respective model stated above were used as ‘soft’ voters in the voting classifier algorithm.
 
+
 ## Key Takeaways:
 1. Our data was highly imbalanced with about 99% data belonging to class 0 and less than 1% data belonging to class 1. That's why we focused on the recall score to measure our model performance.
 2. Models which performed really well were Logistic Regression with regularization, Decision Tree, Random Forest, Support Vector Classifier and the ensemble built consisting of above models.
@@ -45,8 +50,11 @@ All the hyperparameters were tuned using GridsearchCV and the best estimator mod
 4. My first choice of model for this particular classification task at hand would be the Decision Tree but a really close and almost tie would be the ensemble model because both these models give really good recall scores for class 1.
 5. Machine Learning is a very powerful tool.
 
+
 ## Final Model:
 The best model according to the performance measured in terms of recall, was the Decision Tree classifier. This model gave amazing results while at the same time not consuming much time compared to SVC and KNN.
+
+
 
 ## References:
 https://scikit-learn.org/stable/modules/preprocessing.html
